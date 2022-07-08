@@ -14,71 +14,42 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Center(
+          children: const [
+            Center(
               child: Image(image: AssetImage('assets/anime.png'), width: 100),
             ),
-            const SizedBox(
+            SizedBox(
               height: 20,
             ),
-            const Text(
+            Text(
               "LiLy",
               style: TextStyle(fontSize: 30, fontFamily: "Pacifico"),
             ),
-            const SizedBox(
+            SizedBox(
               height: 10,
             ),
-            const Text(
+            Text(
               "Description",
               style: TextStyle(
                   fontSize: 20, fontFamily: 'SourceSansPro', letterSpacing: 5),
             ),
-            const SizedBox(
+            SizedBox(
               height: 30,
             ),
-            Container(
-              width: 250,
-              height: 50,
-              padding: const EdgeInsets.only(
-                left: 20,
-              ),
-              color: Colors.white,
-              child: Row(
-                children: const [
-                  Icon(Icons.phone),
-                  SizedBox(
-                    width: 30,
-                  ),
-                  Text(
-                    "09_234522139",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ],
+            Card(
+              margin: EdgeInsets.only(left: 30, right: 30),
+              child: ListTile(
+                leading: Icon(Icons.phone),
+                title: Text("09-3456991"),
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            Container(
-              width: 250,
-              height: 50,
-              padding: const EdgeInsets.only(
-                left: 20,
+            Card(
+              margin: EdgeInsets.only(top: 30, left: 30, right: 30),
+              child: ListTile(
+                leading: Icon(Icons.mail),
+                title: Text("lily@gmail.com"),
               ),
-              color: Colors.white,
-              child: Row(
-                children: const [
-                  Icon(Icons.email),
-                  SizedBox(
-                    width: 30,
-                  ),
-                  Text(
-                    "lily@gmail.com",
-                    style: TextStyle(fontSize: 18.0),
-                  ),
-                ],
-              ),
-            ),
+            )
           ],
         ),
       ),
